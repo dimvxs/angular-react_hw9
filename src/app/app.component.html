@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="search" (input)="onSearchTermChange()" placeholder="ищи продукт!">
+
+<div class="products" *ngFor="let product of filtered; let i = index"
+     [attr.id]="product.id"
+     [attr.index]="i">
+  <h2>{{product.name}}</h2>
+  <p>{{product.description}}</p>
+  <p>Price: {{product.price}}</p>
+</div>
